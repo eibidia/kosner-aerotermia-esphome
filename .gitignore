@@ -1,0 +1,18 @@
+# === SECRETOS — NUNCA subir a GitHub ===
+secrets.yaml
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# ESPHome / build
+.esphome/
+build/
+*.bin
+*.ota.bin
+
+# Sistema
+.DS_Store
+Thumbs.db
