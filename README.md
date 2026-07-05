@@ -33,8 +33,8 @@ cp secrets.yaml.example secrets.yaml   # y rellena con lo tuyo
 
 | Pieza | Detalle |
 |---|---|
-| Placa ESP32‑S3 con RS485 | <!-- CONFIRMAR modelo exacto, p.ej. Waveshare ESP32‑S3 con transceptor RS485 automático --> |
-| Transceptor RS485 | MAX485 / automático (según placa). Pin de dirección DE/RE si aplica |
+| Placa ESP32‑S3 | DevKitC‑1 o similar (en ESPHome: `board: esp32-s3-devkitc-1`) |
+| Módulo RS485 | TTL↔RS485 tipo MAX485, con pin de dirección DE/RE |
 | Cable de par trenzado | Para el bus A/B hasta la placa de control de la aerotermia |
 | Fuente 5 V | O alimentación USB de la placa |
 
