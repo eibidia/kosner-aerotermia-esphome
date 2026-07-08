@@ -35,6 +35,74 @@ Un sensor informativo, **Modo de control**, te dice en cuál está ahora mismo: 
 - **Silencio** tiene tres estados (apagado / nivel 1 / nivel 2). El nivel 2 es el más silencioso.
 - **Apoyo eléctrico**: consume bastante. Si lo pones en el panel, mételo con confirmación para no darle sin querer.
 
+## Las tarjetas del panel
+
+Este es el panel que uso yo, montado solo con tarjetas *tile* nativas de Home Assistant (sin instalar nada de HACS):
+
+<img src="imgs/panel-home-assistant.png" alt="Panel de la aerotermia en Home Assistant" width="520">
+
+El YAML, para pegarlo en una tarjeta manual (o sección por sección con el editor visual). Los `entity_id` pueden variar según cómo hayas llamado al dispositivo al adoptarlo: compruébalos en **Ajustes → Dispositivos y servicios → ESPHome → Aerotermia** y ajusta.
+
+```yaml
+type: grid
+columns: 2
+square: false
+cards:
+  - type: tile
+    entity: number.aero_consigna_ambiente
+    name: Consigna ambiente
+    features:
+      - type: numeric-input
+        style: buttons
+  - type: tile
+    entity: number.aero_consigna_acs
+    name: Consigna ACS
+    color: amber
+    features:
+      - type: numeric-input
+        style: buttons
+  - type: tile
+    entity: switch.aero_climatizacion
+    name: Climatización
+    features:
+      - type: toggle
+  - type: tile
+    entity: switch.aero_acs
+    name: ACS
+    color: amber
+    features:
+      - type: toggle
+  - type: tile
+    entity: select.aero_silencio
+    name: Silencio
+    features:
+      - type: select-options
+  - type: tile
+    entity: sensor.aero_modo_de_control
+    name: Modo de control
+  - type: tile
+    entity: select.aero_modo
+    name: Modo
+    features:
+      - type: select-options
+  - type: tile
+    entity: sensor.aero_temp_objetivo_salida_tout
+    name: Objetivo agua
+  - type: tile
+    entity: switch.aero_desinfeccion_acs
+    name: Antilegionela
+  - type: tile
+    entity: switch.aero_calentador_apoyo
+    name: Apoyo eléctrico
+```
+
+Detalles del montaje:
+
+- Las dos consignas llevan la función *numeric-input* en modo botones (el − / valor / + que se ve en la captura).
+- **Climatización** y **ACS** llevan la función *toggle*; a la de ACS le va bien `color: amber` para distinguir clima de agua caliente.
+- **Silencio** y **Modo** usan *select-options*, que mete el desplegable dentro de la propia tarjeta.
+- **Antilegionela** y **Apoyo eléctrico** son los switches de desinfección y resistencia de apoyo renombrados en la tarjeta. Al de apoyo, mejor añádele confirmación (`confirmation: true` no existe en tile; hazlo con *tap action → más información* o déjalo sin función de toggle para que no se active de un toque).
+
 ---
 
 ⬅️ Antes: [4) Códigos de avería y protección](04-codigos-averia-proteccion.md)

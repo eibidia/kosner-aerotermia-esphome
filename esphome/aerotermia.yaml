@@ -34,7 +34,7 @@ wifi:
 
 captive_portal:
 
-# === MODBUS LECTURA â Aerotermia KOSNER AQUARIS D HT R290 ===
+# === MODBUS LECTURA — Aerotermia KOSNER AQUARIS D HT R290 ===
 # Cableado: H1->A+  H2->B-  | 9600 8N2 | dir 251 | func 0x04 (3X) | invertir H1/H2 si no comunica
 uart:
   id: mod_uart
@@ -60,11 +60,11 @@ modbus_controller:
 sensor:
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Agua entrada TA"
+    name: "Aero · Agua entrada TA"
     address: 42
     register_type: read
     value_type: S_WORD
-    unit_of_measurement: "Â°C"
+    unit_of_measurement: "°C"
     device_class: temperature
     state_class: measurement
     accuracy_decimals: 1
@@ -72,11 +72,11 @@ sensor:
       - multiply: 0.1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Agua salida TB"
+    name: "Aero · Agua salida TB"
     address: 43
     register_type: read
     value_type: S_WORD
-    unit_of_measurement: "Â°C"
+    unit_of_measurement: "°C"
     device_class: temperature
     state_class: measurement
     accuracy_decimals: 1
@@ -84,11 +84,11 @@ sensor:
       - multiply: 0.1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· DepÃ³sito ACS TW"
+    name: "Aero · Depósito ACS TW"
     address: 46
     register_type: read
     value_type: S_WORD
-    unit_of_measurement: "Â°C"
+    unit_of_measurement: "°C"
     device_class: temperature
     state_class: measurement
     accuracy_decimals: 1
@@ -96,11 +96,11 @@ sensor:
       - multiply: 0.1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· DepÃ³sito inercia TE1"
+    name: "Aero · Depósito inercia TE1"
     address: 44
     register_type: read
     value_type: S_WORD
-    unit_of_measurement: "Â°C"
+    unit_of_measurement: "°C"
     device_class: temperature
     state_class: measurement
     accuracy_decimals: 1
@@ -108,11 +108,11 @@ sensor:
       - multiply: 0.1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Temp objetivo salida TOut"
+    name: "Aero · Temp objetivo salida TOut"
     address: 56
     register_type: read
     value_type: S_WORD
-    unit_of_measurement: "Â°C"
+    unit_of_measurement: "°C"
     device_class: temperature
     state_class: measurement
     accuracy_decimals: 1
@@ -120,11 +120,11 @@ sensor:
       - multiply: 0.1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Ambiente exterior T4"
+    name: "Aero · Ambiente exterior T4"
     address: 50
     register_type: read
     value_type: S_WORD
-    unit_of_measurement: "Â°C"
+    unit_of_measurement: "°C"
     device_class: temperature
     state_class: measurement
     accuracy_decimals: 1
@@ -132,11 +132,11 @@ sensor:
       - multiply: 0.1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Bobina exterior T3"
+    name: "Aero · Bobina exterior T3"
     address: 49
     register_type: read
     value_type: S_WORD
-    unit_of_measurement: "Â°C"
+    unit_of_measurement: "°C"
     device_class: temperature
     state_class: measurement
     accuracy_decimals: 1
@@ -144,11 +144,11 @@ sensor:
       - multiply: 0.1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Descarga compresor TP"
+    name: "Aero · Descarga compresor TP"
     address: 52
     register_type: read
     value_type: S_WORD
-    unit_of_measurement: "Â°C"
+    unit_of_measurement: "°C"
     device_class: temperature
     state_class: measurement
     accuracy_decimals: 1
@@ -156,11 +156,11 @@ sensor:
       - multiply: 0.1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· SucciÃ³n TH"
+    name: "Aero · Succión TH"
     address: 53
     register_type: read
     value_type: S_WORD
-    unit_of_measurement: "Â°C"
+    unit_of_measurement: "°C"
     device_class: temperature
     state_class: measurement
     accuracy_decimals: 1
@@ -168,18 +168,18 @@ sensor:
       - multiply: 0.1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Caudal agua"
+    name: "Aero · Caudal agua"
     address: 64
     register_type: read
     value_type: U_WORD
-    unit_of_measurement: "mÂ³/h"
+    unit_of_measurement: "m³/h"
     state_class: measurement
     accuracy_decimals: 1
     filters:
       - multiply: 0.1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· PWM bomba"
+    name: "Aero · PWM bomba"
     address: 62
     register_type: read
     value_type: U_WORD
@@ -188,7 +188,7 @@ sensor:
     accuracy_decimals: 0
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· PresiÃ³n agua salida"
+    name: "Aero · Presión agua salida"
     address: 61
     register_type: read
     value_type: U_WORD
@@ -199,7 +199,7 @@ sensor:
       - multiply: 0.1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Alta presiÃ³n"
+    name: "Aero · Alta presión"
     address: 86
     register_type: read
     value_type: U_WORD
@@ -208,7 +208,7 @@ sensor:
     accuracy_decimals: 0
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Baja presiÃ³n"
+    name: "Aero · Baja presión"
     address: 87
     register_type: read
     value_type: U_WORD
@@ -217,7 +217,7 @@ sensor:
     accuracy_decimals: 0
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Apertura EXV"
+    name: "Aero · Apertura EXV"
     address: 70
     register_type: read
     value_type: U_WORD
@@ -226,7 +226,7 @@ sensor:
     accuracy_decimals: 0
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Frecuencia compresor"
+    name: "Aero · Frecuencia compresor"
     address: 79
     register_type: read
     value_type: U_WORD
@@ -235,7 +235,7 @@ sensor:
     accuracy_decimals: 0
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Corriente compresor"
+    name: "Aero · Corriente compresor"
     address: 77
     register_type: read
     value_type: U_WORD
@@ -247,7 +247,7 @@ sensor:
       - multiply: 0.1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Velocidad ventilador"
+    name: "Aero · Velocidad ventilador"
     address: 72
     register_type: read
     value_type: U_WORD
@@ -256,7 +256,7 @@ sensor:
     accuracy_decimals: 0
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Modo real (raw)"
+    name: "Aero · Modo real (raw)"
     address: 103
     register_type: read
     value_type: U_WORD
@@ -352,13 +352,13 @@ sensor:
 binary_sensor:
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Bomba principal"
+    name: "Aero · Bomba principal"
     address: 80
     register_type: read
     bitmask: 1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· VÃ¡lvula 4 vÃ­as"
+    name: "Aero · Válvula 4 vías"
     address: 81
     register_type: read
     bitmask: 1
@@ -367,44 +367,44 @@ binary_sensor:
   # --- Estado del sistema (reg 38, bits) ---
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· DescongelaciÃ³n"
+    name: "Aero · Descongelación"
     address: 38
     register_type: read
     bitmask: 4
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· AnticongelaciÃ³n"
+    name: "Aero · Anticongelación"
     address: 38
     register_type: read
     bitmask: 8
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· DesinfecciÃ³n ACS"
+    name: "Aero · Desinfección ACS"
     address: 38
     register_type: read
     bitmask: 16
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Retorno de aceite"
+    name: "Aero · Retorno de aceite"
     address: 38
     register_type: read
     bitmask: 2
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Temp baja (no arranca)"
+    name: "Aero · Temp baja (no arranca)"
     address: 38
     register_type: read
     bitmask: 2048
     device_class: problem
   # --- Averia / Proteccion activas ---
   - platform: template
-    name: "Aero Â· AverÃ­a"
+    name: "Aero · Avería"
     device_class: problem
     lambda: |-
       return (id(aero_err0).state + id(aero_err1).state + id(aero_err2).state +
               id(aero_err3).state + id(aero_err4).state + id(aero_err5).state) > 0.5;
   - platform: template
-    name: "Aero Â· ProtecciÃ³n activa"
+    name: "Aero · Protección activa"
     device_class: problem
     lambda: |-
       return (id(aero_prot0).state + id(aero_prot1).state + id(aero_prot2).state +
@@ -412,7 +412,7 @@ binary_sensor:
 
 text_sensor:
   - platform: template
-    name: "Aero Â· CÃ³digos averÃ­a"
+    name: "Aero · Códigos avería"
     update_interval: 30s
     lambda: |-
       uint16_t r[6] = { (uint16_t) id(aero_err0).state, (uint16_t) id(aero_err1).state,
@@ -427,7 +427,7 @@ text_sensor:
       if (s.empty()) return {"Ninguna"};
       return {s};
   - platform: template
-    name: "Aero Â· CÃ³digos protecciÃ³n"
+    name: "Aero · Códigos protección"
     update_interval: 30s
     lambda: |-
       uint16_t r[5] = { (uint16_t) id(aero_prot0).state, (uint16_t) id(aero_prot1).state,
@@ -443,7 +443,7 @@ text_sensor:
       return {s};
  
   - platform: template
-    name: "Aero Â· Modo de control"
+    name: "Aero · Modo de control"
     update_interval: 30s
     lambda: |-
       int m = (int) id(aero_ctrl_mode_raw).state;
@@ -453,19 +453,19 @@ text_sensor:
       if (m==3) return {"Ambiente + curva"};
       return {"?"};
 
-# === CONTROL AEROTERMIA (escritura 4X holding) â Zona 1 unica ===
+# === CONTROL AEROTERMIA (escritura 4X holding) — Zona 1 unica ===
 select:
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Modo"
+    name: "Aero · Modo"
     address: 2100
     value_type: U_WORD
     optionsmap:
-      "CalefacciÃ³n": 2
-      "RefrigeraciÃ³n": 1
-      "AutomÃ¡tico": 4
+      "Calefacción": 2
+      "Refrigeración": 1
+      "Automático": 4
   - platform: template
-    name: "Aero Â· Silencio"
+    name: "Aero · Silencio"
     id: aero_silencio
     optimistic: false
     options:
@@ -492,25 +492,25 @@ select:
 switch:
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· ClimatizaciÃ³n"
+    name: "Aero · Climatización"
     address: 2101
     register_type: holding
     bitmask: 1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· ACS"
+    name: "Aero · ACS"
     address: 2102
     register_type: holding
     bitmask: 1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· DesinfecciÃ³n ACS"
+    name: "Aero · Desinfección ACS"
     address: 2103
     register_type: holding
     bitmask: 0x40
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Calentador apoyo"
+    name: "Aero · Calentador apoyo"
     address: 2103
     register_type: holding
     bitmask: 0x08
@@ -528,46 +528,46 @@ number:
     step: 1
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Consigna calefacciÃ³n"
+    name: "Aero · Consigna calefacción"
     address: 2107
     value_type: S_WORD
     multiply: 10
     min_value: 15
     max_value: 70
     step: 1
-    unit_of_measurement: "Â°C"
+    unit_of_measurement: "°C"
     mode: box
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Consigna refrigeraciÃ³n"
+    name: "Aero · Consigna refrigeración"
     address: 2106
     value_type: S_WORD
     multiply: 10
     min_value: 7
     max_value: 25
     step: 1
-    unit_of_measurement: "Â°C"
+    unit_of_measurement: "°C"
     mode: box
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Consigna ACS"
+    name: "Aero · Consigna ACS"
     address: 2105
     value_type: S_WORD
     multiply: 10
     min_value: 40
     max_value: 60
     step: 1
-    unit_of_measurement: "Â°C"
+    unit_of_measurement: "°C"
     mode: box
 
   - platform: modbus_controller
     modbus_controller_id: aero
-    name: "Aero Â· Consigna ambiente"
+    name: "Aero · Consigna ambiente"
     address: 2114
     value_type: S_WORD
     multiply: 10
     min_value: 15
     max_value: 70
     step: 1
-    unit_of_measurement: "Â°C"
+    unit_of_measurement: "°C"
     mode: box

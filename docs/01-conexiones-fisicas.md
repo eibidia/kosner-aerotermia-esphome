@@ -17,7 +17,7 @@ El bus de esta máquina va en **Modbus RTU, dirección de esclavo 251, 9600 baud
 - **Par trenzado** para tirar el bus A/B hasta la placa de la aerotermia.
 - Un destornillador pequeño para los bornes.
 
-| Producto | Enlace (limpio, sin seguimiento) |
+| Producto | Enlace |
 |---|---|
 | Módulo RS485 | https://es.aliexpress.com/item/1005010436682293.html |
 | Alimentador 220 V → 5 V | https://es.aliexpress.com/item/1005007088963278.html |
@@ -60,8 +60,7 @@ Corta un tramo de **par trenzado** (los dos hilos de un par) para ir del módulo
 - **`H1` y `H2`** → es el bus **Modbus** que vamos a usar. ✅
 - `L_A` / `L_B` → es para el **mando cableado**. **No los toques.**
 
-📷 **Foto real de estos bornes:** `imgs/aerotermia-bornes-h1h2.jpeg`
-*(en la foto ves el par RS485 —cables naranja y azul— entrando en H1/H2)*
+![Bornes H1/H2 de la placa, con el par RS485 (naranja y azul) ya conectado](imgs/aerotermia-bornes-h1h2.jpeg)
 
 ## Paso 5 · Conecta A/B del módulo a H1/H2
 
@@ -124,8 +123,6 @@ flowchart LR
   a --- h2
   b --- h1
 ```
-
-*(Diagrama propio del repo. Si quieres además el esquema completo de tu placa, hazle una foto a la etiqueta de cableado de dentro de la tapa y guárdala como `imgs/aerotermia-esquema-placa.jpeg`.)*
 
 ## Buenas prácticas de RS485
 

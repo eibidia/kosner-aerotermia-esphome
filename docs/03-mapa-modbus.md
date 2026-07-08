@@ -1,6 +1,6 @@
 # 3) Mapa Modbus — Aerotermia Kosner AQUARIS D HT R‑290
 
-Este es el mapa que uso en el firmware. Los datos (qué hay en cada registro y con qué escala) están sacados de observar la máquina y del manual, y los presento aquí con mis propias tablas y descripciones. Para el detalle oficial completo, el manual del equipo manda.
+Este es el mapa que uso en el firmware, sacado de observar la máquina con el manual al lado.
 
 ## Cómo se habla con la máquina
 

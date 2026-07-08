@@ -7,7 +7,7 @@ La máquina distingue dos familias de códigos, y conviene tenerlo claro:
 
 En el firmware, los registros `3X0090–0095` llevan las averías E01–E96 y los `3X0096–0100` las protecciones P01–P80, cada bit un código. El texto que ves en Home Assistant sale de decodificar esos bits.
 
-> Descripciones puestas con mis palabras a partir del comportamiento observado y del manual. Para el detalle oficial, tira del manual del equipo. Un código con "sub‑variantes" puede afinar más el motivo.
+> Algunos códigos tienen sub‑variantes que afinan más el motivo; para el detalle fino, el manual del equipo.
 
 ## Protecciones (P) — suelen ser transitorias
 

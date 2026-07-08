@@ -6,26 +6,18 @@ Lo he documentado pensando en quien empieza. Vas desde por dónde entran los cab
 
 ![ESPHome](https://img.shields.io/badge/ESPHome-2026.x-blue) ![Home Assistant](https://img.shields.io/badge/Home%20Assistant-local-41BDF5) ![Licencia](https://img.shields.io/badge/licencia-MIT-green)
 
+Así queda el panel en Home Assistant (el YAML de las tarjetas está en la [guía 5](docs/05-entidades-y-control.md#las-tarjetas-del-panel)):
+
+<img src="docs/imgs/panel-home-assistant.png" alt="Panel de la aerotermia en Home Assistant" width="520">
+
 ---
 
 ## ⚠️ Antes de meter mano
 
-Léelo, que aquí no vale el "ya lo miro luego":
-
 - **Hay 230 V y hay propano.** Te vas a conectar al bus RS485 de una máquina enchufada a la red y con circuito de refrigerante R‑290 (propano, que es inflamable). Abrir el equipo puede **cargarte la garantía** y, si lo haces mal, es peligroso de verdad. Va bajo tu responsabilidad; si dudas, que lo vea un instalador.
 - **Primero lee, luego escribe.** Empieza leyendo registros y entendiendo qué es cada cosa. No toques consignas hasta tener el mapa Modbus claro.
 - **Esto no es oficial de Kosner.** Es un proyecto de aficionado, sin ninguna relación con el fabricante. "Kosner" y "AQUARIS" son de sus dueños.
-- **Sobre el manual.** Las tablas de registros y códigos que ves aquí están **reescritas** a partir de lo que observé y del manual; son datos técnicos, no una copia. No incluyo el manual entero. Si añades algún recorte suyo, ponlo con atribución al fabricante y solo lo justo.
-
-## 🔐 Nada de secretos en el repo
-
-Aquí no hay ninguna contraseña ni clave. El firmware tira de `!secret`, y tú te creas tu `secrets.yaml` en local (git lo ignora):
-
-```bash
-cp secrets.yaml.example secrets.yaml   # y rellena con lo tuyo
-```
-
-`secrets.yaml`, `.env` y los `*.key` están en `.gitignore`. Ese fichero no se sube jamás.
+- **Sobre el manual.** Las tablas de registros y códigos salen de mis notas observando la máquina con el manual al lado; no hay páginas del manual copiadas aquí.
 
 ---
 
@@ -52,15 +44,15 @@ Dos partes bien separadas: por un lado el cableado, por otro la configuración e
 | [`docs/02-configuracion-esphome.md`](docs/02-configuracion-esphome.md) | Instalar ESPHome, el `secrets.yaml`, flashear la placa y adoptarla en Home Assistant |
 | [`docs/03-mapa-modbus.md`](docs/03-mapa-modbus.md) | Tablas de registros **3X (lectura)** y **4X (escritura/control)** con sus escalas |
 | [`docs/04-codigos-averia-proteccion.md`](docs/04-codigos-averia-proteccion.md) | Códigos **E (avería)** y **P (protección)** |
-| [`docs/05-entidades-y-control.md`](docs/05-entidades-y-control.md) | Qué entidades salen en HA y cómo tocar modo/consignas/ACS/silencio |
-| [`esphome/aerotermia.yaml`](esphome/aerotermia.yaml) | El firmware ESPHome completo (**saneado**, usa `!secret`) |
+| [`docs/05-entidades-y-control.md`](docs/05-entidades-y-control.md) | Qué entidades salen en HA, cómo tocar modo/consignas/ACS/silencio y el YAML del panel |
+| [`esphome/aerotermia.yaml`](esphome/aerotermia.yaml) | El firmware ESPHome completo |
 
 ---
 
 ## En cuatro pasos (si ya te manejas)
 
 1. **Conecta** el ESP32↔RS485 a la placa de control (bornes H1/H2). → [guía](docs/01-conexiones-fisicas.md)
-2. `cp secrets.yaml.example secrets.yaml` y mete tu WiFi y tus claves.
+2. `cp secrets.yaml.example secrets.yaml` y mete tu WiFi y tus claves (ese fichero está en `.gitignore`, no se sube).
 3. Flashea `esphome/aerotermia.yaml` con ESPHome. → [guía](docs/02-configuracion-esphome.md)
 4. Home Assistant descubre el dispositivo solo. Lo adoptas y aparecen todos los sensores y controles.
 
