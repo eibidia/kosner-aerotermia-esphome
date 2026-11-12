@@ -23,6 +23,10 @@ Así queda el panel en Home Assistant (el YAML de las tarjetas está en la [guí
 
 ## Qué necesitas (hardware)
 
+En mi montaje uso dos **Waveshare ESP32-S3-RS485-CAN**, con el transceptor RS485 integrado. [Fotos del cuadro y de los módulos](https://github.com/eibidia/kosner-aerotermia-esphome/issues/1#issuecomment-6831825596)
+
+La tabla recoge los componentes del montaje con transceptor externo descrito en la guía.
+
 | Pieza | Detalle |
 |---|---|
 | Placa ESP32‑S3 | DevKitC‑1 o similar (en ESPHome: `board: esp32-s3-devkitc-1`) |
