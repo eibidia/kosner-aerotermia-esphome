@@ -23,7 +23,7 @@ Así queda el panel en Home Assistant (el YAML de las tarjetas está en la [guí
 
 ## Qué necesitas (hardware)
 
-En mi montaje uso dos **Waveshare ESP32-S3-RS485-CAN**, con el transceptor RS485 integrado. [Fotos del cuadro y de los módulos](https://github.com/eibidia/kosner-aerotermia-esphome/issues/1#issuecomment-6831825596)
+Para la aerotermia uso **un Waveshare ESP32-S3-RS485-CAN**, con el transceptor RS485 integrado. El segundo módulo que se ve en las fotos lo uso para el fancoil. [Fotos del cuadro y de los módulos](https://github.com/eibidia/kosner-aerotermia-esphome/issues/1#issuecomment-6831825596) · [Proyecto del fancoil](https://github.com/eibidia/kosner-fancoil-esphome)
 
 La tabla recoge los componentes del montaje con transceptor externo descrito en la guía.
 
